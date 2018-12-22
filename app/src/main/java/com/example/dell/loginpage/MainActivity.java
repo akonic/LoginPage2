@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Name = (EditText)findViewById(R.id.etname);
         Password = (EditText)findViewById(R.id.etpassword);
-        Info = (TextView)findViewById(R.id.tvinfo);
+        Info = (TextView)findViewById(R.id.textView);
         Login = (Button)findViewById(R.id.btnLogin);
         Info.setText("No of attemps remaining:5");
         Login.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void validate(String userName,String userPassword)
     {
-        if ((userName == "ANKIT") && (userPassword == "ANKIT")){
+        if ((userName.equals("a")) && (userPassword.equals("a"))){
             Intent intent = new Intent(MainActivity.this,SecondActivity.class);
             startActivity(intent);
         }else{ counter--;
